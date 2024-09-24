@@ -32,7 +32,8 @@ function donationCardManagement(card) {
     button.addEventListener('click', function () {
         const userDonated = card.querySelector('.user-donate').value.trim();
         card.querySelector('.user-donate').value = '';
-        if (checkValidity(userDonated) && userDonated !== '') {
+        if(userDonated !== '') return;
+        if (checkValidity(userDonated)) {
             setMyBalance(userDonated);
             setTotalDonation(card, userDonated);
             document.getElementById('confirmation-modal').classList.remove('hidden');
