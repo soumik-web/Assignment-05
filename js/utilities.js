@@ -5,7 +5,7 @@ function setMyBalance(amount) {
 
 function setTotalDonation(card, totalDonation) {
     const balance = card.querySelector('.total-donation').innerText;
-    console.log(balance);
+    // console.log(balance);
     card.querySelector('.total-donation').innerText = parseFloat(totalDonation) + parseFloat(balance);
 }
 // total-donation
@@ -14,12 +14,12 @@ function setTotalDonation(card, totalDonation) {
 // donation-sector
 function checkValidity(amount) {
     const balance = document.getElementById('my-current-balance').innerText;
-    if (parseFloat(amount) > parseFloat(balance)) {
-        alert("You don't have sufficient balance !!");
+    if (isNaN(amount) || amount <= 0) {
+        alert("Invalid Input !");
         return false;
     }
-    else if (isNaN(amount)) {
-        alert("Invalid Input !");
+    else if (parseFloat(amount) > parseFloat(balance)) {
+        alert("You don't have sufficient balance !!");
         return false;
     }
     else {
@@ -30,9 +30,9 @@ function donationCardManagement(card) {
     const button = card.querySelector('.donation-btn');
     const sector = card.querySelector('.donation-sector').innerText;
     button.addEventListener('click', function () {
-        const userDonated = card.querySelector('.user-donate').value;
+        const userDonated = card.querySelector('.user-donate').value.trim();
         card.querySelector('.user-donate').value = '';
-        if (checkValidity(userDonated)) {
+        if (checkValidity(userDonated) && userDonated !== '') {
             setMyBalance(userDonated);
             setTotalDonation(card, userDonated);
             document.getElementById('confirmation-modal').classList.remove('hidden');

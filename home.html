@@ -22,10 +22,10 @@
 </head>
 
 <body class="lexend-font max-w-screen-2xl mx-auto">
-    <header class="text-lg sticky top-0 left-0 right-0 z-10 backdrop-blur-sm">
+    <header class="text-lg sticky inset-0 z-10 backdrop-blur-sm">
         <!-- Navigation Bar -->
         <nav
-            class="px-2 sm:px-6 lg:px-20 xl:px-32 grid grid-cols-2 gap-1 py-4 sm:py-6 bg-[#F9F7F3] bg-opacity-60 sm:grid-cols-3">
+            class="px-2 sm:px-6 lg:px-20 xl:px-32 grid grid-cols-2 gap-1 py-4 sm:py-6 bg-[#F9F7F3] bg-opacity-80 sm:grid-cols-3">
             <!-- Blog Button -->
             <div class="order-3 sm:order-1 text-end sm:text-start">
                 <button id="blog-btn" class="btn bg-[#B4F461] hover:bg-[#B4F461] btn-sm font-semibold">Blog</button>
@@ -208,7 +208,7 @@
         <div id="confirmation-modal" class="hidden">
             <div class="flex fixed inset-0 z-20 bg-black bg-opacity-50  justify-center items-center text-center">
                 <!-- Content -->
-                <div class="bg-white rounded-xl grid justify-center items-center px-10 py-4 sm:py-5 sm:px-14 md:px-20 gap-4 m-auto">
+                <div class="bg-white rounded-xl grid justify-center items-center px-10 py-4 sm:py-8 sm:px-14 md:px-20 gap-4 m-auto">
                     <h1 class="font-bold text-4xl text-[#111111]">
                         Congrates!
                     </h1>
@@ -222,8 +222,8 @@
                         Successfully
                     </h3>
                     <div>
-                        <button id="confirmation-modal-close" class="btn btn-active max-w-44">
-                            Close Confirmation
+                        <button id="confirmation-modal-close" class="btn btn-active leading-5 font-semibold">
+                            Close <br> Confirmation
                         </button>
                     </div>
                 </div>
