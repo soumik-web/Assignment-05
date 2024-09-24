@@ -37,7 +37,7 @@ function donationCardManagement(card) {
             setMyBalance(userDonated);
             setTotalDonation(card, userDonated);
             document.getElementById('confirmation-modal').classList.remove('hidden');
-            addHistoryCard(sector, userDonated);
+            addHistoryCard(sector, parseFloat(userDonated));
         }
         else return;
     })
