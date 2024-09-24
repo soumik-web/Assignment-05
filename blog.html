@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/blog-logo.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .lexend-font {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+        }
+    </style>
+
+    <!-- Fontawesome(icons) -->
+    <script src="https://kit.fontawesome.com/3d667e6c8c.js" crossorigin="anonymous"></script>
+
+
+    <title>My Blog</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="lexend-font max-w-screen-2xl mx-auto">
+
+    <header class="text-lg sticky top-0 left-0 right-0 z-10 backdrop-blur-sm">
+        <!-- Navigation Bar -->
+        <nav
+            class="px-2 sm:px-6 lg:px-20 xl:px-32 grid grid-cols-2 gap-1 py-4 sm:py-6 bg-[#F9F7F3] bg-opacity-60 sm:grid-cols-3">
+            <!-- Blog Button -->
+            <div class="order-3 sm:order-1 text-end sm:text-start">
+                <button id="home-btn" class="btn bg-[#B4F461] hover:bg-[#B4F461] btn-sm font-semibold">Home</button>
+            </div>
+            <!-- Brand Title -->
+            <div class="flex items-center gap-2  order-1 sm:order-2 sm:justify-center row-span-2 sm:row-span-1">
+                <img width="30px" src="assets/logo.png" alt="">
+                <p>
+                    Donate <br class="sm:hidden">Bangladesh
+                </p>
+            </div>
+            <!-- My Current Balance -->
+            <div
+                class="flex text-left justify-end items-center gap-2 order-2 sm:order-3 text-lg sm:font-normal text-[#111111] text-opacity-60 sm:row-span-1">
+                <img width="20px" src="assets/coin.png" alt="">
+                <p><span id="my-current-balance">5500</span> BDT</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="px-2 sm:px-6 lg:px-20 xl:px-32">
+            <div>
+                <h1 class="font-extrabold text-4xl py-8">
+                    Important FAQ <i class="fa-regular fa-circle-question"></i>
+                </h1>
+            </div>
+            <!-- Accordion -->
+            <div class="grid gap-1">
+                <!-- Question 01 -->
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                    <div class="collapse-content">
+                        <p class="text-[#111111] text-opacity-60">
+                            The Document Object Model (DOM) is the data representation of the objects that comprise the
+                            structure and content of a document on the web. It is a cross-platform and
+                            language-independent interface that treats an HTML or XML document as a tree structure
+                            wherein each node is an object representing a part of the document. DOM methods allow
+                            programmatic access to the tree; with them one can change the structure, style or content of
+                            a document.
+                        </p>
+                    </div>
+                </div>
+                <!-- Question 02 -->
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                    <div class="collapse-content">
+                        <p>
+                            To select an element from the DOM in JavaScript, you can use methods like
+                            <span class="bg-yellow-300 text-black">document.querySelector()</span>, which selects the
+                            first matching element based on a CSS selector (e.g.,
+                            <span class="bg-yellow-300 text-black">document.querySelector('.my-class')</span>). For
+                            multiple elements, use
+                            <span class="bg-yellow-300 text-black">document.querySelectorAll()</span>, which returns a
+                            NodeList of all matches. You can also use
+                            <span class="bg-yellow-300 text-black">getElementById()</span> for selecting by ID or
+                            <span class="bg-yellow-300 text-black">getElementsByClassName()</span> for class names. Once
+                            selected, you can manipulate the elements' content, styles, or attributes.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- Question 03 -->
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,
+                        and why is it useful?</div>
+                    <div class="collapse-content">
+                        <p class="text-[#111111] text-opacity-60">
+                            Event delegation is a technique in the DOM where a single event listener is attached to a
+                            parent element instead of multiple listeners on child elements. By leveraging event
+                            bubbling, it allows the parent to capture events from its children. This approach enhances
+                            performance by reducing the number of listeners, simplifies code management by centralizing
+                            event handling, and facilitates handling dynamically added elements without needing to
+                            reattach listeners. Overall, event delegation provides an efficient way to manage events in
+                            the DOM.
+                        </p>
+                    </div>
+                </div>
+                <!-- Question 04 -->
+                <div class="collapse collapse-arrow bg-base-200">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?</div>
+                    <div class="collapse-content">
+                        <p class="text-[#111111] text-opacity-60">
+                            To manipulate an element's attributes and styles using the DOM, you can use various
+                            JavaScript methods. For attributes,
+                            <span class="bg-yellow-300 text-black">setAttribute()</span> allows you to add or change an
+                            attribute, while
+                            <span class="bg-yellow-300 text-black">getAttribute()</span> retrieves its
+                            value (e.g.,
+                            <span class="bg-yellow-300 text-black">element.setAttribute('data-custom',
+                                'value')</span>). To manipulate styles, you modify the
+                            <span class="bg-yellow-300 text-black">style</span> property directly, changing properties
+                            with camelCase syntax, like
+                            <span class="bg-yellow-300 text-black">element.style.backgroundColor = 'yellow'</span>.
+                            Additionally,
+                            <span class="bg-yellow-300 text-black">classList</span> enables you to add,
+                            remove, or toggle classes, such as
+                            <span class="bg-yellow-300 text-black">element.classList.add('new-class')</span> or
+                            <span class="bg-yellow-300 text-black">element.classList.toggle('active')</span>. These
+                            methods facilitate dynamic changes to both attributes and styles of DOM elements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Blog Script -->
+    <script>
+        document.getElementById('home-btn').addEventListener('click', function(){
+            window.location.href = 'home.html'
+        })
+    </script>
+
+</body>
+
+</html>
