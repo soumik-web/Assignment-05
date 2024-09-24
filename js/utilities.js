@@ -15,11 +15,11 @@ function setTotalDonation(card, totalDonation) {
 function checkValidity(amount) {
     const balance = document.getElementById('my-current-balance').innerText;
     if (parseFloat(amount) > parseFloat(balance)) {
-        alert("You don't have enough balance");
+        alert("You don't have sufficient balance !!");
         return false;
     }
     else if (isNaN(amount)) {
-        alert("Invalid Input");
+        alert("Invalid Input !");
         return false;
     }
     else {

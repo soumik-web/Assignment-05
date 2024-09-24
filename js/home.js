@@ -1,6 +1,6 @@
 // Blog Button Linked
 document.getElementById('blog-btn').addEventListener('click', function(){
-    window.location.href = '/blog.html'
+    window.location.href = '../blog.html'
 })
 
 // Donation Button
